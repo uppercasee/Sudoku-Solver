@@ -15,15 +15,19 @@ board = [[0,6,0,1,0,4,0,5,0],
 
 def printBoard(board):
     for i in range(9):
-            if i % 3 == 0 and i != 0:
-                print("- - - - - - - - - - - ")
-            for j in range(9):
-                if j % 3 == 0 and j != 0:
-                    print("| ", end="")
-                if j == 8:
-                    print(board[i][j])
-                else:
-                    print(str(board[i][j]) + " ", end="")
+        if i % 3 == 0 and i != 0:
+            print("- - - - - - - - - - - ")
+        for j in range(9):
+           if j % 3 == 0 and j != 0:
+               print("| ", end="")
+           if j == 8 and board[i][j] != 0:
+               print(board[i][j])
+           elif j == 8 and board[i][j] == 0:
+               print(". ")
+           elif board[i][j] == 0:
+                print(". ", end="")
+           else:
+               print(str(board[i][j]) + " ", end="")
 
 def findEmpty(board):
     """finds the next row, col on the puzzle that's not filled yet --> rep with 0 
