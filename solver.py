@@ -101,8 +101,8 @@ if __name__ == "__main__":
     print("The initial board is: ")
     sudSol.printBoard(sudSol.board)
     sudSol.solver(sudSol.board)
-    endTime = time.time()
     print("The final board is: ")
     sudSol.printBoard(sudSol.board)
+    endTime = time.time()
     print(f"The total time to solve the puzzle is {time.process_time() - start}")
 
