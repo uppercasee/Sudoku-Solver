@@ -95,12 +95,12 @@ def solver(board):
 
 
 if __name__ == "__main__":
+    start = time.process_time()
     print("The initial board is: ")
     printBoard(board)
-    startTime = time.time()
     solver(board)
     endTime = time.time()
     print("The final board is: ")
     printBoard(board)
-    print(f"The total time to solve the puzzle is {endTime - startTime}")
+    print(f"The total time to solve the puzzle is {time.process_time() - start}")
 
