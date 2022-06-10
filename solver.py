@@ -88,6 +88,9 @@ class SudokuSolver():
             if self.isValid(board, guess, row, col):
                 # step 3.1: if this is a valid guess, then place it at that spot on the puzzle
                 board[row][col] = guess
+                # self.printBoard(board)
+                # time.sleep(0.1)
+                # print("\n")
                 # step 4: then we recursively call our solver!
                 if self.solver(board):
                     return True
@@ -103,6 +106,5 @@ if __name__ == "__main__":
     sudSol.solver(sudSol.board)
     print("The final board is: ")
     sudSol.printBoard(sudSol.board)
-    endTime = time.time()
     print(f"The total time to solve the puzzle is {time.process_time() - start}")
 
